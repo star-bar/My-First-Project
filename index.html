@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Project</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="myPage">
+        <h1>Welcome to where my love blooms for you</h1>
+        <h2>This is for my lover</h2>
+        <p>I can't wait to see you, the love of my life</p>
+        <p> I can't wait to be home in your arms and get to see you everyday. every moment without you has been a moment of hardship and longing for you. I hope you know how much i love you, always and forever.</p>
+     <div class="countdown-section">
+    <h3>Countdown till we meet again</h3>
+    <div id="timer">Loading...</div>
+    </div>
+        <div class="image-container">
+            <img src="us.jpg" class="bottom-image">
+            <img src="FOF.jpg" class="top-image">
+        </div>
+    
+    <script>
+    const targetDate = new Date("May 10, 2026 09:20:00").getTime();
+
+    const countdownFunction = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+        if (distance < 0) {
+            clearInterval(countdownFunction);
+            document.getElementById("timer").innerHTML = "THE DAY IS HERE!";
+        }
+    }, 1000);
+</script>
+</div>
+</body>
+</html>

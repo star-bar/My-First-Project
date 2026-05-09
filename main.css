@@ -1,0 +1,83 @@
+body { 
+    background-color: rgb(143, 74, 111); /* Your plum/purple color */
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white; 
+    margin: 0;
+    padding: 40px 20px;
+}
+
+
+h1 { 
+    font-size: 60px; 
+    color: rgb(33, 73, 22); 
+    margin-bottom: 10px;
+}
+
+h1:hover { 
+    color: rgb(68, 4, 84); 
+}
+
+h2 { 
+    font-size: 40px; 
+    color: rgb(35, 17, 17); 
+}
+
+p { 
+    font-size: 20px; 
+    color: rgb(255, 230, 230); 
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+#timer {
+    font-size: 55px;
+    font-weight: bold;
+    color: rgb(62, 6, 6);
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+
+
+.image-container { 
+    position: relative; 
+    width: 350px;  /* Adjust size as needed */
+    height: 500px; 
+    margin: 40px auto;
+    border: 8px solid rgba(255, 255, 255, 0.2); /* Soft white border */
+    border-radius: 10px;
+    overflow: hidden; /* Keeps the photos inside the rounded corners */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents photos from stretching */
+}
+
+/* Forces the Flowers to sit directly on top of "Us" */
+.top-image { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    z-index: 10; 
+    opacity: 1; 
+    transition: opacity 1.2s ease; /* Slow, romantic fade */
+}
+
+/* Hides flowers when you hover the mouse over the container */
+.image-container:hover .top-image { 
+    opacity: 0; 
+}
+
+/* 4. Countdown Styling */
+.countdown-section {
+    margin-top: 50px;
+}
+
+
+.myPage { 
+    width: 100%; 
+}
